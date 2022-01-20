@@ -5,11 +5,13 @@
 # @Author   : YuLei
 # @Filename : CodeStyleChecker.py
 
-# Todo: 用来检查各类代码风格是否符合规范
+
 import os
+import subprocess
 
 
 class CodeStyleChecker:
+    # Todo: 用来检查各类代码风格是否符合规范
 
     def __init__(self):
         pass
@@ -52,9 +54,8 @@ class CodeStyleChecker:
               f'''rulesets/java/ali-naming.xml,rulesets/java/ali-oop.xml,rulesets/java/ali-other.xml,''' + \
               f'''rulesets/java/ali-set.xml -f text'''
 
-        cmd_echo = os.system(cmd)
-        # print(f'''cmd_echo = {cmd_echo}''')
-        if int(cmd_echo) != 0:
+        sub = subprocess.run(cmd, shell=True)
+        if int(sub.returncode) != 0:
             is_syntax_correct = False
             error_msg = 'Java 代码格式不规范，请修改后重新提交'
 

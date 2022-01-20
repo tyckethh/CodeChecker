@@ -2,7 +2,7 @@
 
 ## 获取当前路径
 BASE_PATH=$(cd `dirname $0`; pwd)
-echo 'BASE_PATH: '$BASE_PATH
+#echo 'BASE_PATH: '$BASE_PATH
 
 echo "开始进行本次提交检查"
 
