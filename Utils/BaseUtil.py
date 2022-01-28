@@ -22,7 +22,7 @@ class BaseUtil:
         pass
 
     @staticmethod
-    def get_diff_files(old_rev, new_rev, ref_name) -> list[str]:
+    def get_diff_files(old_rev, new_rev, ref_name) -> list:
         """ 用于获取 git 两个版本之间发生变动的文件名
 
         :param old_rev:  旧版本的 hash

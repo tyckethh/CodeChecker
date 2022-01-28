@@ -17,7 +17,7 @@ class CodeStyleChecker:
         pass
 
     @staticmethod
-    def p3c_checker(base_path) -> tuple[bool, str]:
+    def p3c_checker(base_path) -> tuple:
         """ 用于检测各类代码是否符合规范
         规范请见相应代码类别的文档
 
@@ -36,7 +36,7 @@ class CodeStyleChecker:
         return is_syntax_correct, error_msg
 
     @staticmethod
-    def java_p3c_checker(base_path: str) -> tuple[bool, str]:
+    def java_p3c_checker(base_path: str) -> tuple:
         """ 用于判断 java 代码是否符合规范，基于 alibaba p3c 插件
         规范详见 《Java开发手册（嵩山版）.pdf》
 

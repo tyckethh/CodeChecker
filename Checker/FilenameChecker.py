@@ -16,7 +16,7 @@ class FilenameChecker:
         pass
 
     @staticmethod
-    def filename_checker(filename: str) -> tuple[bool, str]:
+    def filename_checker(filename: str) -> tuple:
         """ 用于检测各类文件名是否符合规范
         规范请见相应类别的文件检测函数
 
@@ -35,7 +35,7 @@ class FilenameChecker:
         return is_syntax_correct, error_msg
 
     @staticmethod
-    def code_filename_checker(filename: str) -> tuple[bool, str]:
+    def code_filename_checker(filename: str) -> tuple:
         """ 用于判断代码的文件名是否符合规范。
         存放代码的文件夹应该只包括数字字母下划线
         代码文件名只能包括字母、数字和下划线
@@ -48,7 +48,7 @@ class FilenameChecker:
         # >>> FilenameChecker.code_filename_checker("AAAA__ni123_.java")
         # (True, '')
         # >>> FilenameChecker.code_filename_checker("AAAA你好.java")
-        # (False, 'AAAA你好.java 不符合代码类文件名规范。代码类文件名应只包含数字、字母、下划线')
+        # (False, '"AAAA你好.java" 不符合代码类文件名规范。代码类文件名应只包含数字、字母、下划线')
         """
         is_syntax_correct = True
         error_msg = ''
